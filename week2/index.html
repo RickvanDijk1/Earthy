@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#week-2" tabindex="1" class="md-skip">
+      <a href="#configuring" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -220,6 +220,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Week 2
@@ -233,13 +235,29 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#week-2" class="md-nav__link">
-    WEEK 2
+  <a href="#location" class="md-nav__link">
+    Location
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#size" class="md-nav__link">
+    Size
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining" class="md-nav__link">
+    Combining
   </a>
   
 </li>
@@ -322,13 +340,29 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#week-2" class="md-nav__link">
-    WEEK 2
+  <a href="#location" class="md-nav__link">
+    Location
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#size" class="md-nav__link">
+    Size
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining" class="md-nav__link">
+    Combining
   </a>
   
 </li>
@@ -350,10 +384,42 @@
               
                 
                 
-                  <h1>Week 2</h1>
-                
-                <h2 id="week-2">WEEK 2</h2>
-<p>We worked super hard in week 2</p>
+                <h1 id="configuring">Configuring:</h1>
+<p><span style="font-size:1.4em;">Space planning for the neighbourhood and the key building types</span></p>
+<hr />
+<p>To start designing the Hammam, first the design of the designing process has been created. As stated in 
+<a href="https://rickvandijk1.github.io/Earthy/week1/" title="Week 1">week 1</a> we assume one Hammam per district.
+Step one in the design is determining the location and the size of the Hammam. Combining the expected
+size and best locations is therefore the main structure of our flowchart, as shown in <i> Fig. 1</i>
+<br>
+<img alt="Flowchart 1" src="../Flowchart1.jpg" />
+<i><span style="font-size:0.8em;">Fig. 1: Basic structure of the flowchart in week 2</span></i></p>
+<hr />
+<h2 id="location">Location</h2>
+<p>Creating an Hammam in the camp will require some thinking about the location. Already in <a href="https://rickvandijk1.github.io/Earthy/week1/" title="Week 1">week 1</a>
+we defined the important points where the Hammam should be placed. <i>Density</i> and <i>Walking distance</i> being the most important ones.
+We created an algorythm to find the best spots for the Hammam, using previously described parameters.
+Density was calculated with the <a href="https://rickvandijk1.github.io/Earthy/DensityMap.jpg/" title="map">density map</a>, loaded into the Image Sampler of Grasshopper.
+The inverse of Density overall means more space to use and less families to bribe/offer alternatives.
+Walking distance was determined as, the closer to the centre of a district, the better.
+<br>
+Also the other attractionpoints have been taken in account. A grid was made for the entire camp and the algorythm gave a result for each point (the higher -&gt; better).
+Now we edited the "point-system" to give less result and make it dependend per grid. This loop can be seen in the following GIF:</p>
+<p><img alt="Feedback on locations" src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" /><br>
+<span style="font-size:0.7em;">Fig. 2: Feedback loop on the filtering of points within each district.</span>
+<br><br />
+The whole location finding can be summarized in the following flowchart.
+<img alt="Flowchart 2" src="../Flowchart2.jpg" />
+<i><span style="font-size:0.8em;">Fig. 3: Flowchart towards finding the locations</span></i></p>
+<hr />
+<h2 id="size">Size</h2>
+<p>Now we have a lot of possible locations, we need to know the size of the plot to compare with the location and make a PoR.
+Firstly we analysed the topography of "Bathhouse" and how they work, which resulted in the following depth charts:
+<img alt="Depth chart" src="../Depthchart1.jpg" />
+<i><span style="font-size:0.8em;">Fig. 4: Layout and depth charts of several bathhouses</span></i>
+<img src="Depthchart1.jpg" width="200">
+After reviewing the depth charts and layouts of the bathhouses and hammam, we chose a "standard" Hammam to design with.</p>
+<h2 id="combining">Combining</h2>
                 
                   
                 
