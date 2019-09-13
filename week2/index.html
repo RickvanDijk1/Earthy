@@ -188,11 +188,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      CONFIGURATION
+      Configuration
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        CONFIGURATION
+        Configuration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -324,6 +324,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../pictures/" title="Extra pictures" class="md-nav__link">
+      Extra pictures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../literature/" title="Literature" class="md-nav__link">
       Literature
     </a>
@@ -430,7 +442,7 @@
 <p><span style="font-size:1.4em;">Space planning for the neighbourhood and the key building types</span></p>
 <hr />
 <p>To start designing the Hammam, first the design of the designing process has been created. As stated in 
-<a href="https://rickvandijk1.github.io/Earthy/week1/" title="Week 1">week 1</a> we assume one Hammam per district.
+<u><a href="https://rickvandijk1.github.io/Earthy/week1/" title="Week 1">week 1</a></u> we assume one Hammam per district.
 Step one in the design is determining the location and the size of the Hammam. Combining the expected
 size and best locations is therefore the main structure of our flowchart, as shown in <i> Fig. 1</i>
 <br>
@@ -438,16 +450,16 @@ size and best locations is therefore the main structure of our flowchart, as sho
 <i><span style="font-size:0.8em;">Fig. 1: Basic structure of the flowchart in week 2</span></i></p>
 <hr />
 <h2 id="location">Location</h2>
-<p>Creating an Hammam in the camp will require some thinking about the location. Already in <a href="https://rickvandijk1.github.io/Earthy/week1/" title="Week 1">week 1</a>
+<p>Creating an Hammam in the camp will require some thinking about the location. Already in <u><a href="https://rickvandijk1.github.io/Earthy/week1/" title="Week 1">week 1</a></u>
 we defined the important points where the Hammam should be placed. <i>Density</i> and <i>Walking distance</i> being the most important ones.
 We created an algorythm to find the best spots for the Hammam, using previously described parameters.
-Density was calculated with the <a href="https://rickvandijk1.github.io/Earthy/DensityMap.jpg/" title="map">density map</a>, loaded into the Image Sampler of Grasshopper.
+Density was calculated with the <u><a href="http://127.0.0.1:8000/DensityMap.jpg" title="map">density map</a></u>, loaded into the Image Sampler of Grasshopper.
 The inverse of Density overall means more space to use and less families to bribe/offer alternatives.
 Walking distance was determined as, the closer to the centre of a district, the better.
 <br>
 Also the other attractionpoints have been taken in account. A grid was made for the entire camp and the algorythm gave a result for each point (the higher -&gt; better).
-Now we edited the "point-system" to give less result and make it dependend per grid. This loop can be seen in the following GIF:</p>
-<p><img alt="Feedback on locations" src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" /><br>
+Now we edited the "point-system" to give less results and make it dependend per district. This loop can be seen in the following GIF:</p>
+<p><img alt="LocationLoop" src="../LocationLoop.gif" /><br>
 <span style="font-size:0.7em;">Fig. 2: Feedback loop on the filtering of points within each district.</span>
 <br>  <br />
 The whole location finding can be summarized in the following flowchart.
@@ -456,16 +468,17 @@ The whole location finding can be summarized in the following flowchart.
 <hr />
 <h2 id="size">Size</h2>
 <p>Now we have a lot of possible locations, we need to know the size of the plot to compare with the location and make a PoR.
-Firstly we analysed the topography of "Bathhouse" and how they work, which resulted in the following depth charts:
-<img alt="Depth chart" src="../Depthchart1.jpg" />
-<i><span style="font-size:0.8em;">Fig. 4: Layout and depth charts of several bathhouses</span></i>  <br><br />
-After reviewing the depth charts and layouts of the bathhouses and <a href="https://rickvandijk1.github.io/Earthy/HammamTypes.jpg/" title="map">other hammam</a>, we chose a "standard" Hammam to design with.
+Firstly we analysed the topography of "Bathhouse" and how they work, which resulted in some <u><a href="https://rickvandijk1.github.io/DepthChart1.jpg" title="Depthchart">depth charts</a></u>
+After reviewing the depth charts and layouts of the bathhouses and other hammam, we chose a "standard" Hammam to design with.
+<img alt="Hammam Types" src="../HammamTypes.jpg" />
+<i><span style="font-size:0.8em;">Fig. 4: Layout and depth charts of several bathhouses</span></i>  <br>
 For this Hammam we created a depth chart, which became imput for the Bubble Diagram, together with the needed rooms.<br> <br />
 <img alt="Bubble Diagram" src="../Bubble.jpg" /><br>
-<span style="font-size:0.7em;">Fig. 5: A gif? with the bubble diagram?</span></p>
+<span style="font-size:0.7em;">Fig. 5: The bubble diagram working with random sizes</span></p>
 <h2 id="program-of-requirements">Program of requirements</h2>
-<p>After some experimenting with the Bubble Diagram and the occupation calculations from <a href="https://rickvandijk1.github.io/Earthy/week1/#occupation-calculation" title="Week 1">week 1</a>
-we described the following as the Program of Requirements (also PoR).</p>
+<p>ADDD MAX TETXXT</p>
+<p><img alt="Bubble Diagram" src="../Bubble.jpg" /><br>
+<span style="font-size:0.7em;">Fig. 5: The bubble diagram working with random sizes</span></p>
 <table>
 <thead>
 <tr>
@@ -647,15 +660,22 @@ The following Bubble diagram presents the pysical connection within the rooms an
 <p>Now we have some possible locations, but some are not viable to build the Hammam, mostly due to houses standing on the location. 
 Choosing the location is hard to do parametricly, as the house cannot be loaded in. The GIF below shows the chosen location for the districts. We will further continue developing
 a Hammam in district 10. All locations are chosen to have the less amount of houses removed.<br />
-<img alt="Feedback on locations" src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" /><br>
-<span style="font-size:0.7em;">Fig. 2: Feedback loop on the filtering of points within each district.</span></p>
+<img alt="Feedback on locations" src="../Our spot.gif" /><br>
+<span style="font-size:0.7em;">Fig. 8: Feedback loop on the filtering of points within each district.</span></p>
 <hr />
 <h2 id="flowchart">Flowchart</h2>
 <p>The flowchart below shows all the processes that took place this week. Its basicly a sum-up of previously described processes. <br>
 <img alt="Flowchart3" src="../Flowchart3.jpg" /><br>
-<span style="font-size:0.7em;">Fig. 7: REL Diagram of the program of requirements</span></p>
+<span style="font-size:0.7em;">Fig. 9: Total flowchart of week 2</span></p>
 <hr />
 <h2 id="next-steps">Next steps</h2>
+<p>Week 2 resulted in a base configuration of the building with an suggested location, size and configuration. The next weeks we will continue with formfinding. The main inputs 
+for the next phase should corrospond with the outputs generated in this phase. The Bubble and REL diagrams will provide the inputs for the basic shape. On the side we already
+generated some knowledge towards the use of masonry in vaults or domes. This is important when creating a grid, generated from the Bubble and REL diagrams. Vault overall support
+and easier grid and allow for higher free-heights. To adapt the layout to the location and to fit a Hammam, we will have to research the use, noise, routing, sunligt and information
+about the plot. Then to generate a mesh of the building, knowledge of masonry and load transfer is needed. The previous is also shown in the flowchart below.</p>
+<p><img alt="Flowchart4" src="../Flowchart4.jpg" /><br>
+<span style="font-size:0.7em;">Fig. 10: Total flowchart of week 2 and expectations for further design</span></p>
                 
                   
                 
@@ -691,13 +711,13 @@ a Hammam in district 10. All locations are chosen to have the less amount of hou
           </a>
         
         
-          <a href="../literature/" title="Literature" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../pictures/" title="Extra pictures" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Literature
+                Extra pictures
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
