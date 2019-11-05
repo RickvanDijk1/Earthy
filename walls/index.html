@@ -552,8 +552,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../references/" title="References" class="md-nav__link">
-      References
+    <a href="../scripts/" title="Scripts" class="md-nav__link">
+      Scripts
     </a>
   </li>
 
@@ -781,7 +781,7 @@ This chapter will focus on how each wall is being built. First the focus is on h
 <p>From the 2_Forming chapter in <u><a href="https://rickvandijk1.github.io/forming/#rule-n11-add-wall-thickness-and-wall-height" title="Rule N11">Rule N11</a></u> the wall thickness and height is added. From the configuration hexagons work well with making quite easy builds. The main idea of the design is that the hexagons are extruded 
 vertically and then domes are built on top of them. This is realisable as hexagons are easier with this than rectangles are. The walls are therefore in shape quite easy. There are four different kinds of domes, so there are also
 four types of wall-thicknesses. In the <u><a href="https://rickvandijk1.github.io/structural" title="structural">structural report</a></u> the following diagram was shown:</p>
-<p><img alt="flowchart" src="bricklayasdfing_flowchart.jpg" /><br>
+<p><img alt="diagram" src="structural_digram.jpg" /><br>
 <span style="font-size:0.7em;">Fig. 4: Diagram for wall thicknesses</span></p>
 <p>In this picture it shows that there are 4 different kind of wall thicknesses, depending on the dome size. These thicknesses are 0.5m, 0,8m, 1.0m and 1.2m. The whole Hammam is made with these sizes, to make it a bit doable and understandable
 on how to do bricklaying in the project. </p>
@@ -810,7 +810,7 @@ expected for the 120 degree corners for the archways.</p>
 <span style="font-size:0.7em;">Fig. 6: In white the off-cuts are shown, per layer this already results in 24 off-cut bricks</span><br><br></p>
 <p><img alt="walls" src="../brick_laying2.jpg" /><br>
 <span style="font-size:0.7em;">Fig. 7: In white the off-cuts are shown, per layer around 18 off-cut bricks</span><br><br></p>
-<p>The more off-cut bricks, the worse as it has to be built easily for the people that build it. </p>
+<p>The higher the number of off-cut bricks the less effective is the wall construction.</p>
 <hr />
 <p>Considering the triangular grid of the project the idea was obvious to run the same procedure with
 equivalent triangular bricks. When staggering the bricks above each other and rotating them alternately
@@ -839,13 +839,12 @@ edge.</p>
 decision is if there are hard problems with doors. In the hexagons there are 6 smaller elements that combined form the hexagon. </p>
 <p>When combining all the triangles it is important that it can also be mirrored, as the bricks should switch every layer. By using these 6 elements, each layer can be mirrored
 and thus a sturdy wall can be realised. </p>
-<p><img alt="walls" src="asdf_laying5.jpg" /><br>
+<p><img alt="walls" src="../wall_bricks1.jpg" /><br>
 <span style="font-size:0.7em;">Fig. 11: Each element will look like this</span><br><br>
-<img alt="walls" src="brickasdf5.jpg" /><br>
+<img alt="walls" src="../wall_bricks2.jpg" /><br>
 <span style="font-size:0.7em;">Fig. 12: And combined they are mirrored</span><br><br></p>
-<p>For the project a script was developed that scaled with the size of the wall. As long as the size of the wall follows <em>(n + 1/3) * sqrt(0,12)</em>, the script is usable.<br>
-<u><a href="http://127.0.0.1:8000/bricklaying_automated.gh" title="bricklaying">The script for wall bricklaying </a></u><br>
-<span style="font-size:0.7em;">If clicking doesn't download, please save the link as a .gh file</span><br><br></p>
+<p>For this project a script was developed that included all of our approach.
+<u><a href="https://rickvandijk1.github.io/scripts" title="scripts">Go to scripts</a></u></p>
 <hr />
 <h2 id="construction">Construction</h2>
 <p>So to construct the wall, first the foundation has to be built. The first step is setting out the hexagon on the site. In this example, a hexagon with a diameter of 9.6 meter is used.</p>

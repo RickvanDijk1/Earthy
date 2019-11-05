@@ -552,8 +552,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../references/" title="References" class="md-nav__link">
-      References
+    <a href="../scripts/" title="Scripts" class="md-nav__link">
+      Scripts
     </a>
   </li>
 
@@ -789,7 +789,7 @@ Apply dynamic relaxation<br></p>
 <p><img alt="flowchart" src="../Ruleset Gif_0005_Frame 20.jpg" /><br>
 <span style="font-size:0.7em;">Fig. 4: Domes in shape</span></p>
 <p>To apply dynamic relaxation, tesselation has to be applied onto the mesh. The mesh is a dome with a hexagon as the base.</p>
-<p><img alt="flowchart" src="Tesselation.gif" /><br>
+<p><img alt="flowchart" src="../tesselation.gif" /><br>
 <span style="font-size:0.7em;">Fig. 5: GIF of applying different tesselations</span></p>
 <p><img alt="flowchart" src="../tesselation_top.jpg" /><br>
 <span style="font-size:0.7em;">Fig. 6: Top view of all the tesselations</span></p>
@@ -806,28 +806,55 @@ to an simpler triangulated tesselation.</p>
 <h2 id="bricklaying">Bricklaying</h2>
 <p>For bricklaying there are a few options to consider. Firstly, are ribs needed? Secondly, what pattern will be used and lastly how does this work with the chosen tesselation.
 <br>
-When looking at traditional architecture with domes, usually ribs aren't needed, unless the diameter is a little higher. As the diameters in this project are small enough, assumed is that no ribs are needed. </p>
-<p>....
-....</p>
-<p>The main reference was taken from the Jameh Mosque of Isfahan, where a dome is created with fishbone structure. It looks very nice and has some great possibilities when building with it.</p>
-<p><img alt="flowchart" src="../domes_analysis.jpg" /><br>
+When looking at traditional architecture with domes, usually ribs aren't needed, unless the diameter is a little higher. As the diameters in this project are small enough, assumed is that no ribs are needed. 
+The idea of using a fishbone pattern comes from a reference from the Jameh Mosque of Isfahan, where a dome is created with fishbone structure. It looks very nice and has some great possibilities when building with it.
+Also, using this method allows for slightly sturdier domes as the bricks are a bit locked in place due to the pattern. 
+<img alt="flowchart" src="../fishbone reference.jpg" /><br>
+<span style="font-size:0.7em;">Fig. 9: Fishbone reference</span></p>
+<p>When developing the script to make this, one big problem arose. Using the tesselation of figure 8, the normals of the points are changing quite heavily on the edges of faces. For this reason, another approach was needed
+to be used. For bricklaying there are two options, first divide the tesselation into very tiny faces so that the normals make sense. Or create a new mesh that nearly gets to the desired shape. Another problem that came
+was the constructability. There is no way residents of the camp can build very complicated shapes, like the tesselation that was proposed. It would be ideal if the dome was a spherical shape, so with simple tools this 
+could actually be built. <br></p>
+<p>There are two possibilities to solve this. First change the dome shape, by using for instance pendentives. This is often used, but clashes with the triangular bricks and only made matters worse. Another option is to 
+change the wall slowly into a circle, but laos this clashed with the triangular bricks. Eventually the decision fell that the dome should be split in two different shapes.
+This resulted in the domeshape seen in figure 7. It is nearly the same shape as the tesselation, but exists of two different shapes. First there is an compression belt that lofts between the hexagon and is made by
+normal "flat bricks" (headers and stretchers) , see figure 8. As it lofts into a circle, a "normal" spherical dome can be placed on top, using fishbone techniques.</p>
+<p><img alt="flowchart" src="../tesselation_dome2.jpg" /><br>
 <span style="font-size:0.7em;">Fig. 7: Stresses in the different tesselations</span></p>
-<p><img alt="flowchart" src="../domes_analysis.jpg" /><br>
-<span style="font-size:0.7em;">Fig. 7: Stresses in the different tesselations</span></p>
+<p><img alt="flowchart" src="../domes_building 2.jpg" /><br>
+<span style="font-size:0.7em;">Fig. 8: Headers and strethers in compression belt</span></p>
+<p>For the project a script was developed that developed this brick pattern.
+<u><a href="https://rickvandijk1.github.io/Earthy/bricklaying_dome.gh" title="bricklaying">The script for wall bricklaying </a></u><br>
+<span style="font-size:0.7em;">If clicking doesn't download, please save the link as a .gh file</span><br><br></p>
 <hr />
 <h2 id="construction">Construction</h2>
-<p>This chapter will contain the steps taken to build the dome.</p>
-<p><img alt="flowchart" src="../construction14.jpg" /><br>
-<span style="font-size:0.7em;">Fig. a: asdasdfff</span></p>
-<p><img alt="flowchart" src="../construction15.jpg" /><br>
-<span style="font-size:0.7em;">Fig. a: asdasdfff</span></p>
-<p><img alt="flowchart" src="../domes_building 1.jpg" /><br>
-<span style="font-size:0.7em;">Fig. a: asdasdfff</span></p>
+<p>This chapter will contain the steps taken to build the dome. After the walls and openings have been laid down it time to start the domes.
+<br></p>
+<p>In figure 9 one sees the first part of the dome construction, the compression belt that makes the
+transition from hexagon to circle. To construct this part of the dome on would need a Fathy compass,
+(see fig 10), and six straight rod/bars with a length equal to the width of the wall.<br>
+<img alt="flowchart" src="../construction14.jpg" /><br>
+<span style="font-size:0.7em;">Fig. 9: The compression belt as loft between hexagon and circle</span><br>
+<img alt="flowchart" src="../domes_building 1.jpg" /><br>
+<span style="font-size:0.7em;">Fig. 10: The use of the fathy</span><br></p>
+<p>The first step is to raise the Fathy so that it touches on top of the wall. Than measures out the circle
+that touches all the six corners of the room. In the six corners of the wall place the rod so that they
+start in the center of the wall and angle they that they align with the circle of the Fathy compass.
+Starting out from the corners and lay the brick until you have approximated the circle made by the
+Fathy compass (see fig 10).<br>
+In fig.. The top part of the dome with the fishbone dome masonry pattern.<br>
+To lay the top part of the dome we start we one brick laid flat on its side flat and use that to angle
+the next brick against, after a couple of bricks the friction and weight will make it that the first angled
+brick cannot move as easily anymore. Using the Fathy compass makes sure that the top part of the
+bricks are in the right angle. The tricky part comes after a full circle when one needs to get the first
+brick out, the one that’s laid out flat. By this time the mortar between the brick should have dried
+enough that the masonry doesn’t fall over like dominoes. Now one can start laying the second layer
+in the other direction, for example if you oriented the first layer clockwise now you lay them counter
+clockwise. Remember to check orientation of the brick every now and then with the Fathy compass.</p>
 <p><img alt="flowchart" src="../domes_building 2.jpg" /><br>
-<span style="font-size:0.7em;">Fig. a: asdasdfff</span></p>
-<ul>
-<li>PICTURE OF FOAMWORK???????????</li>
-</ul>
+<span style="font-size:0.7em;">Fig. 11: Headers and stretchers in the compression belt</span></p>
+<p><img alt="flowchart" src="../construction15.jpg" /><br>
+<span style="font-size:0.7em;">Fig. 12: Final dome with fishbone bricks</span></p>
                 
                   
                 
